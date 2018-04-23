@@ -1,0 +1,76 @@
+<form><input type="file" accept="image/*" capture></form>
+<canvas width="600" height="800"></canvas>
+
+<script src="cv.js"></script>
+<script src="aruco.js"></script>
+<script>
+var input = document.querySelector('input[type=file]'); // see Example 4
+
+input.onchange = function () {
+  var file = input.files[0];
+
+  //upload(file);
+  drawOnCanvas(file);   // see Example 6
+  //displayAsImage(file); // see Example 7
+  
+};
+
+function upload(file) {
+  var form = new FormData(),
+      xhr = new XMLHttpRequest();
+
+  form.append('image', file);
+  xhr.open('post', 'server.php', true);
+  xhr.send(form);
+}
+
+function drawOnCanvas(file) {
+  var reader = new FileReader();
+
+  reader.onload = function (e) {
+    var dataURL = e.target.result,
+        c = document.querySelector('canvas'), // see Example 4
+        ctx = c.getContext('2d'),
+        img = new Image();
+
+    img.onload = function() {
+      //c.width = 480; //img.width;
+      //c.height = 640; //img.height;
+      //ctx.drawImage(img, 0, 0);
+      w = img.width * c.height / img.height
+      ctx.drawImage(img, 0, 0, img.width, img.height, (c.width - w) / 2, 0, w, c.height)
+
+
+      var imageData = ctx.getImageData(0,0,c.width, c.height);
+
+      //diamo in input alla libreria aruco l'immagine ruotata e ridimensionata
+      var detector = new AR.Detector();
+      var markers = detector.detect(imageData);
+
+      for(k in markers){
+        ctx.fillStyle ="#0fdd2e";
+        ctx.fillText(markers[k].id, markers[k].corners[0].x,markers[k].corners[0].y);
+        ctx.stroke();
+      }
+  
+
+    };
+
+    img.src = dataURL;
+  };
+
+  reader.readAsDataURL(file);
+}
+
+function displayAsImage(file) {
+  var imgURL = URL.createObjectURL(file),
+      img = document.createElement('img');
+
+  img.onload = function() {
+    URL.revokeObjectURL(imgURL);
+  };
+
+  img.src = imgURL;
+  document.body.appendChild(img);
+}
+</script>

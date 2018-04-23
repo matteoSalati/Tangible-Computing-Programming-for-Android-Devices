@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/gallery_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:cropToPadding="false"
+            android:scaleType="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tmp_text"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nLevel"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@id/textLevel"
+            android:text="@string/level"/>
+
+        <!--<NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nLevel"
+            android:layout_gravity="center"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:layout_toLeftOf="@id/textLevel"/> -->
+
+        <!--<ImageView
+            android:id="@+id/hysto_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:cropToPadding="false"
+            android:scaleType="center"
+            android:src="@mipmap/ic_launcher" -->
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/confirm_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="224dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_backup"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="mini"
+        app:backgroundTint="@color/colorFAB4"/>
+
+    <TextView
+        android:id="@+id/confirm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="234dp"
+        android:layout_marginEnd="70dp"
+        android:background="@android:color/background_light"
+        android:elevation="6dp"
+        android:text="@string/executeCommand"
+        android:textAlignment="viewEnd"
+        android:textColor="#f00"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/color_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="176dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_color_lens"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="mini"
+        app:backgroundTint="@color/colorFAB3"/>
+
+    <TextView
+        android:id="@+id/color_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="187dp"
+        android:layout_marginEnd="70dp"
+        android:background="@android:color/background_light"
+        android:elevation="6dp"
+        android:text="@string/color_find"
+        android:textAlignment="viewEnd"
+        android:textColor="#f00"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/circle_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="128dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_bubble_chart"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="mini"
+        app:backgroundTint="@color/colorFAB2"/>
+
+    <TextView
+        android:id="@+id/circle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="70dp"
+        android:background="@android:color/background_light"
+        android:elevation="6dp"
+        android:text="@string/circle_find"
+        android:textAlignment="viewEnd"
+        android:textColor="#f00"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/gallery_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_collections"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="mini"
+        app:backgroundTint="@color/colorFAB1"/>
+
+    <TextView
+        android:id="@+id/gallery_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="70dp"
+        android:background="@android:color/background_light"
+        android:elevation="6dp"
+        android:text="@string/gallery_open"
+        android:textAlignment="viewEnd"
+        android:textColor="#f00"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/action_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        android:src="@drawable/ic_add_circle_outline"
+        app:backgroundTint="@color/colorAccent"/>
+
+</android.support.design.widget.CoordinatorLayout>

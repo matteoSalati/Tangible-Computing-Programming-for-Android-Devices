@@ -1,0 +1,26 @@
+<resources>
+    <string name="alertPermission">Permessi per la galleria necessari</string>
+    <string name="messagePermission">TCPApp necessita i permessi per la galleria per funzionare.</string>
+    <string name="gallery_open">Apertura galleria</string>
+    <string name="image_select">Seleziona una immagine</string>
+    <string name="circle_find">Conferma compatibilità</string>
+    <string name="color_find">Elabora</string>
+    <string name="executeCommand">Esegui comandi</string>
+    <string name="gallery_miss">Devi prima caricare una immagine</string>
+    <string name="circle_miss">Devi prima controllare la compatibilità</string>
+    <string name="hist_miss">Devi prima elaborare l\'immagine</string>
+    <string name="implement">Azione non ancora implementata</string>
+    <string name="command">comandi trovati</string>
+    <string name="forward">Avanti</string>
+    <string name="right">Destra</string>
+    <string name="left">Sinistra</string>
+    <string name="if_forward">If_Avanti</string>
+    <string name="if_right">If_Destra</string>
+    <string name="if_left">If-Sinistra</string>
+    <string name="unknown">Sconosciuto</string>
+    <string name="nothing">Nessun comando trovato</string>
+    <string name="level">Livello:</string>
+    <string name="alertLevel">Livelli Blockly</string>
+    <string name="messageLevel">Quale livello vuoi provare?</string>
+
+</resources>

@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name" translatable="false">TCPApp</string>
+    <string name="action_settings" translatable="false">About</string>
+    <string name="alertPermission">Memory Access permission required</string>
+    <string name="messagePermission">TCPApp needs memory access permission to work properly.</string>
+    <string name="gallery_open">Open gallery</string>
+    <string name="image_select">Select an image</string>
+    <string name="circle_find">Confirm compatibility</string>
+    <string name="color_find">Compute</string>
+    <string name="executeCommand">Execute Commands</string>
+    <string name="gallery_miss">You have to upload an image first</string>
+    <string name="circle_miss">You have to check compatibility first</string>
+    <string name="hist_miss">You have to compute the image first</string>
+    <string name="implement">Action not already implemented</string>
+    <string name="tmp_text" translatable="false"> </string>
+    <string name="command">commands found</string>
+    <string name="start" translatable="false">Start</string>
+    <string name="forward">Forward</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="if_forward">If_Forward</string>
+    <string name="if_right">If_Right</string>
+    <string name="if_left">If_Left</string>
+    <string name="if_else_stop" translatable="false">Stop_If_Else</string>
+    <string name="while_" translatable="false">While</string>
+    <string name="while_stop" translatable="false">Stop_While</string>
+    <string name="else_" translatable="false">Else</string>
+    <string name="stop" translatable="false">Stop</string>
+    <string name="unknown">Unknown</string>
+    <string name="nothing">No commands found</string>
+    <string name="level">Level:</string>
+    <string name="error_scrivi" translatable="false">Error: Stop miss</string>
+    <string name="error_while" translatable="false">Error: While Stop miss</string>
+    <string name="error_if_cond" translatable="false">Error: Conditions If miss</string>
+    <string name="error_if" translatable="false">Error: If Stop miss</string>
+    <string name="error_else" translatable="false">Error: Else Stop miss</string>
+    <string name="error_stop_excess" translatable="false">Error: If/Else Stop in excess</string>
+    <string name="alertLevel">Blockly's Levels</string>
+    <string name="messageLevel">Which level do you want to try?</string>
+
+</resources>
+
+
+
+
+
+
+
+
