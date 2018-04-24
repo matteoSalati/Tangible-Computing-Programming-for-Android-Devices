@@ -1,7 +1,7 @@
 # Tangible Computing Programming for Android Devices
 Android application to learn the basics of computing programming through physical blocks.
 
-It uses Google's Blockly library, specifically the [Maze game](https://blockly-games.appspot.com/maze?lang=en)
+It uses Google's Blockly library, specifically the [Maze game](https://blockly-games.appspot.com/maze?lang=en).
 
 ## Install
 It's a simple Android App, so install it on your device via apk file.
